@@ -23,7 +23,8 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://formspree.io/f/xjkeppjn', {
+      const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/xjkeppjn';
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

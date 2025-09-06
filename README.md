@@ -151,13 +151,33 @@ Notes-Site/
 4. **Navigate Easily**: Use the navigation bar or browser back/forward buttons
 5. **Contact Us**: Use the contact form for questions or feedback
 
-## 🤝 Contributing
+## 🔐 Security & Environment Setup
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Environment Variables
+
+1. **Copy the environment template:**
+   ```bash
+   cp .env.example .env.local
+   ```
+
+2. **Update `.env.local` with your actual values:**
+   ```bash
+   VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+   ```
+
+### Security Notes
+
+- ✅ **Google Verification File**: Safe to keep in public repo (needed for verification)
+- ✅ **Formspree Endpoint**: Can be public (Formspree endpoints are designed to be public)
+- ✅ **Environment Variables**: Use `.env.local` for sensitive data (automatically ignored by git)
+- ❌ **Never commit**: API keys, passwords, or sensitive credentials to the repository
+
+### Google Search Console
+
+The `googlee384d10e841f11b2.html` file in the `public/` directory is intentionally public and required for Google verification. This is **not a security risk** as:
+- It's just a verification token
+- Google needs to access it to verify domain ownership
+- It doesn't contain sensitive information
 
 ## 📝 License
 
