@@ -26,6 +26,41 @@ const NotesList = ({ subject, navigateTo }) => {
       { name: 'Unit 2 (part 3) - RE to FA, Equivalence of FA\'s & RE\'s, FA to RG and vice-versa.docx', path: '/notes/toc/Unit 2 (part 3) - RE to FA, Equivalence of FA\'s & RE\'s, FA to RG and vice-versa.docx', size: '2.7 MB', type: 'docx' },
       { name: 'Unit 2 (part 4) - Minimization of FA.docx', path: '/notes/toc/Unit 2 (part 4) - Minimization of FA.docx', size: '1.8 MB', type: 'docx' }
     ],
+    'computer-graphics': [
+      // Main Notes and Books
+      { name: 'Computer Graphics C Version - Hearn & Baker.pdf', path: '/notes/computer-graphics/Computer Graphics C Version - Hearn & Baker (1).pdf', size: '15.2 MB', type: 'pdf' },
+      { name: 'Graphics Notes.pdf', path: '/notes/computer-graphics/Graphics notes.pdf', size: '3.8 MB', type: 'pdf' },
+      { name: 'Fractals.pdf', path: '/notes/computer-graphics/fractals.pdf', size: '2.1 MB', type: 'pdf' },
+      { name: 'CG Paper Assessment 1.pdf', path: '/notes/computer-graphics/CG-Paper-Assesment-1.pdf', size: '1.9 MB', type: 'pdf' },
+      { name: 'Unit 1.pdf', path: '/notes/computer-graphics/1.pdf', size: '4.2 MB', type: 'pdf' },
+      { name: 'Unit 2.pdf', path: '/notes/computer-graphics/2.pdf', size: '3.7 MB', type: 'pdf' },
+
+      // Assignment Images
+      { name: 'Assignment Question 1', path: '/notes/computer-graphics/assignment/WhatsApp Image 2020-07-27 at 09.26.24.jpeg', size: '1.2 MB', type: 'image' },
+      { name: 'Assignment Question 2', path: '/notes/computer-graphics/assignment/WhatsApp Image 2020-07-27 at 09.26.24 (1).jpeg', size: '1.1 MB', type: 'image' },
+      { name: 'Assignment Question 3', path: '/notes/computer-graphics/assignment/WhatsApp Image 2020-07-27 at 09.26.25.jpeg', size: '1.3 MB', type: 'image' },
+      { name: 'Assignment Question 4', path: '/notes/computer-graphics/assignment/WhatsApp Image 2020-07-27 at 09.26.25 (1).jpeg', size: '1.0 MB', type: 'image' },
+      { name: 'Assignment Question 5', path: '/notes/computer-graphics/assignment/WhatsApp Image 2020-07-27 at 09.26.25 (2).jpeg', size: '1.4 MB', type: 'image' },
+
+      // C/C++ Source Code Files
+      { name: 'Basic Graphics Program (C)', path: '/notes/computer-graphics/assignemnt code/cg.c', size: '2.1 KB', type: 'code' },
+      { name: 'DDA Line Algorithm (C)', path: '/notes/computer-graphics/assignemnt code/DDA.CPP', size: '1.8 KB', type: 'code' },
+      { name: 'Bresenham Line Algorithm (C)', path: '/notes/computer-graphics/assignemnt code/BRESEN.CPP', size: '2.3 KB', type: 'code' },
+      { name: 'Circle Drawing (C)', path: '/notes/computer-graphics/assignemnt code/CIRCLE.CPP', size: '1.9 KB', type: 'code' },
+      { name: 'Line Clipping (C)', path: '/notes/computer-graphics/assignemnt code/BLIC.CPP', size: '2.5 KB', type: 'code' },
+      { name: 'Polygon Clipping (C)', path: '/notes/computer-graphics/assignemnt code/COLL.CPP', size: '3.1 KB', type: 'code' },
+      { name: 'Graphics Program 1 (C)', path: '/notes/computer-graphics/assignemnt code/GRAPHIC1.CPP', size: '2.7 KB', type: 'code' },
+      { name: 'Graphics Program 2 (C)', path: '/notes/computer-graphics/assignemnt code/GRAPHIC2.CPP', size: '2.4 KB', type: 'code' },
+      { name: 'Man Drawing (C)', path: '/notes/computer-graphics/assignemnt code/MAN.CPP', size: '3.2 KB', type: 'code' },
+      { name: 'Orbit Circle (C)', path: '/notes/computer-graphics/assignemnt code/ORBIT-CI.CPP', size: '1.6 KB', type: 'code' },
+
+      // CG Folder Programs
+      { name: 'Reflection Program (C)', path: '/notes/computer-graphics/CG/REFLEX.CPP', size: '2.8 KB', type: 'code' },
+      { name: 'Rectangle Rotation (C)', path: '/notes/computer-graphics/CG/ROTARECT.CPP', size: '2.2 KB', type: 'code' },
+      { name: 'Rectangle Scaling (C)', path: '/notes/computer-graphics/CG/SCALEREC.CPP', size: '1.9 KB', type: 'code' },
+      { name: 'Rectangle Shearing (C)', path: '/notes/computer-graphics/CG/SHEAR.CPP', size: '2.1 KB', type: 'code' },
+      { name: 'Rectangle Translation (C)', path: '/notes/computer-graphics/CG/TRANRECT.CPP', size: '2.3 KB', type: 'code' }
+    ],
     'pyq-papers': [
       { name: 'Question Paper 1', path: '/notes/pyq-papers/WhatsApp Image 2025-09-01 at 22.05.39_9b1eb4ec.jpg', size: '1.2 MB', type: 'image' },
       { name: 'Question Paper 2', path: '/notes/pyq-papers/WhatsApp Image 2025-09-01 at 22.05.40_0e618a7a.jpg', size: '1.1 MB', type: 'image' },
@@ -45,6 +80,7 @@ const NotesList = ({ subject, navigateTo }) => {
     'computer-networks': 'Computer Networks',
     'software-engineering': 'Software Engineering',
     'toc': 'Theory of Computation',
+    'computer-graphics': 'Computer Graphics',
     'pyq-papers': 'PYQ Papers'
   };
 

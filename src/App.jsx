@@ -29,6 +29,9 @@ function App() {
     } else if (path.startsWith('/toc')) {
       setCurrentView('notes')
       setSubject('toc')
+    } else if (path.startsWith('/computer-graphics')) {
+      setCurrentView('notes')
+      setSubject('computer-graphics')
     } else if (path.startsWith('/pyq-papers')) {
       setCurrentView('notes')
       setSubject('pyq-papers')
@@ -57,6 +60,9 @@ function App() {
       } else if (path.startsWith('/toc')) {
         setCurrentView('notes')
         setSubject('toc')
+      } else if (path.startsWith('/computer-graphics')) {
+        setCurrentView('notes')
+        setSubject('computer-graphics')
       } else if (path.startsWith('/pyq-papers')) {
         setCurrentView('notes')
         setSubject('pyq-papers')

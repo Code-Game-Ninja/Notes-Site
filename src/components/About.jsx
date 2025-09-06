@@ -26,8 +26,7 @@ const About = () => {
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our platform provides organized, downloadable notes for key computer science subjects,
-                helping students prepare effectively for their exams and deepen their understanding
-                of complex topics.
+                including Computer Networks, Software Engineering, Theory of Computation, and Computer Graphics.
               </p>
             </div>
           </div>
@@ -86,6 +85,10 @@ const About = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-purple-600 mb-2">Theory of Computation</h3>
               <p className="text-gray-600">Finite automata, regular expressions, and computational theory concepts.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-orange-600 mb-2">Computer Graphics</h3>
+              <p className="text-gray-600">2D/3D graphics, algorithms, rendering, and computer graphics programming.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-red-600 mb-2">PYQ Papers</h3>

@@ -24,6 +24,13 @@ const SubjectList = ({ navigateTo }) => {
       icon: '🧮'
     },
     {
+      name: 'Computer Graphics',
+      path: 'computer-graphics',
+      description: '2D/3D graphics, algorithms, rendering, and computer graphics programming',
+      color: 'orange',
+      icon: '🎨'
+    },
+    {
       name: 'PYQ Papers',
       path: 'pyq-papers',
       description: 'Previous year question papers and exam resources',

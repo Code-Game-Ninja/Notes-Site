@@ -46,6 +46,7 @@ const Footer = ({ navigateTo }) => {
               <li><button onClick={() => navigateTo('notes', 'computer-networks')} className="text-gray-300 hover:text-white transition-colors">Computer Networks</button></li>
               <li><button onClick={() => navigateTo('notes', 'software-engineering')} className="text-gray-300 hover:text-white transition-colors">Software Engineering</button></li>
               <li><button onClick={() => navigateTo('notes', 'toc')} className="text-gray-300 hover:text-white transition-colors">Theory of Computation</button></li>
+              <li><button onClick={() => navigateTo('notes', 'computer-graphics')} className="text-gray-300 hover:text-white transition-colors">Computer Graphics</button></li>
               <li><button onClick={() => navigateTo('notes', 'pyq-papers')} className="text-gray-300 hover:text-white transition-colors">PYQ Papers</button></li>
             </ul>
           </div>

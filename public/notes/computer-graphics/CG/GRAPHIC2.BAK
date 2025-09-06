@@ -1,0 +1,25 @@
+#include<graphics.h>
+#include<conio.h>
+
+int main(){
+	int gm = DETECT, gd = 0;
+
+	initgraph(&gm, &gd, "C:\\MUSIC\\TC\\BGI");
+	setbkcolor(CYAN);
+
+	setcolor(RED);
+	circle(50, 50, 25);
+
+	setcolor(WHITE);
+
+	settextstyle(1,0,6);
+	outtextxy(50,100,"Hello!");
+      //	gotoxy(200,200);
+
+	rectangle(50, 250, 150, 350);
+      //	floodfill(100, 300, RED);
+
+	getch();
+	closegraph();
+	return 0;
+}

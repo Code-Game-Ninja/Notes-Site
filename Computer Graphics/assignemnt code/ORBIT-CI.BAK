@@ -1,0 +1,26 @@
+#include<graphics.h>
+#include<conio.h>
+#include<dos.h>
+#include<math.h>
+
+void drawman();
+int main(){
+
+	 int gd = DETECT, gm = 0;
+	 initgraph(&gd, &gm, "C:\\MUSIC\\TC\\BGI");
+	 int r = 50, a1=120, a2=90,h=320,k=240,x=320,y;
+
+	 while(!kbhit()){
+		arc(320, 240, a1, a2, r);
+		x = int((sin(15)*r)+x);
+		y =  int( k+ (sqrt( (r*r)-((x-h)*(x-h)) )) );
+
+		circle(x,y,20);
+
+
+	 }
+
+	 getch();
+	 closegraph();
+	 return 0;
+}

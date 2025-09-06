@@ -12,7 +12,7 @@ const Home = ({ navigateTo }) => {
             Welcome to <span className="text-blue-600">Notes Hub</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Access and download study notes for Computer Networks, Software Engineering, Theory of Computation, and PYQ Papers.
+            Access and download study notes for Computer Networks, Software Engineering, Theory of Computation, Computer Graphics, and PYQ Papers.
             All materials are organized and ready for easy access.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

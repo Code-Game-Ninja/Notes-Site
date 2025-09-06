@@ -129,7 +129,16 @@ Notes-Site/
 - Automata Theory
 - Minimization of Automata
 
-### 4. PYQ Papers
+### 4. Computer Graphics
+- 2D/3D Graphics Algorithms
+- Line Drawing (DDA, Bresenham)
+- Circle Drawing Algorithms
+- Polygon Clipping
+- Transformations (Translation, Rotation, Scaling, Shearing)
+- Graphics Programming Code
+- Assignment Questions and Solutions
+
+### 5. PYQ Papers
 - Previous Year Question Papers
 - Sample Papers
 - Practice Materials
