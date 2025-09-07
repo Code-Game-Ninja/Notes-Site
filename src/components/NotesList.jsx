@@ -7,6 +7,7 @@ const NotesList = ({ subject, navigateTo }) => {
     { name: '2-Networks.pdf', path: '/notes/computer-networks/2-Networks.pdf', size: '1.8 MB', type: 'pdf' },
     { name: '3-Network Types, Switching and Internet.pdf', path: '/notes/computer-networks/3-Network Types, Switching and Internet.pdf', size: '3.2 MB', type: 'pdf' },
     { name: '4-Protocol Layering.pdf', path: '/notes/computer-networks/4-Protocol Layering.pdf', size: '2.5 MB', type: 'pdf' },
+    { name: '5-TCP IP Protocol Suite.pdf', path: '/notes/computer-networks/5-TCP IP Protocol Suite.pdf', size: '2.4 MB', type: 'pdf' },
     { name: '6-Encapsulation, Addressing, Multiplexing and OSI Model.pdf', path: '/notes/computer-networks/6-Encapsulation, Addressing, Multiplexing and OSI Model.pdf', size: '2.0 MB', type: 'pdf' },
     { name: '7-Analog & Digital Signals.pdf', path: '/notes/computer-networks/7-Analog & Digital Signals.pdf', size: '1.7 MB', type: 'pdf' },
     { name: '8-Transmission Media.pdf', path: '/notes/computer-networks/8-Transmission Media.pdf', size: '2.3 MB', type: 'pdf' },
