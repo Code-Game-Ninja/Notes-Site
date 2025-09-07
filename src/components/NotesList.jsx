@@ -3,11 +3,16 @@ import React, { useEffect } from 'react';
 const NotesList = ({ subject, navigateTo }) => {
   const notesData = {
     'computer-networks': [
-      { name: '1-Data Communications.pdf', path: '/notes/computer-networks/1-Data Communications.pdf', size: '2.1 MB', type: 'pdf' },
-      { name: '2-Networks.pdf', path: '/notes/computer-networks/2-Networks.pdf', size: '1.8 MB', type: 'pdf' },
-      { name: '3-Network Types, Switching and Internet.pdf', path: '/notes/computer-networks/3-Network Types, Switching and Internet.pdf', size: '3.2 MB', type: 'pdf' },
-      { name: '4-Protocol Layering.pdf', path: '/notes/computer-networks/4-Protocol Layering.pdf', size: '2.5 MB', type: 'pdf' },
-      { name: 'Data-Communications-and-Network.pdf', path: '/notes/computer-networks/Data-Communications-and-Network.pdf', size: '4.1 MB', type: 'pdf' }
+    { name: '1-Data Communications.pdf', path: '/notes/computer-networks/1-Data Communications.pdf', size: '2.1 MB', type: 'pdf' },
+    { name: '2-Networks.pdf', path: '/notes/computer-networks/2-Networks.pdf', size: '1.8 MB', type: 'pdf' },
+    { name: '3-Network Types, Switching and Internet.pdf', path: '/notes/computer-networks/3-Network Types, Switching and Internet.pdf', size: '3.2 MB', type: 'pdf' },
+    { name: '4-Protocol Layering.pdf', path: '/notes/computer-networks/4-Protocol Layering.pdf', size: '2.5 MB', type: 'pdf' },
+    { name: '6-Encapsulation, Addressing, Multiplexing and OSI Model.pdf', path: '/notes/computer-networks/6-Encapsulation, Addressing, Multiplexing and OSI Model.pdf', size: '2.0 MB', type: 'pdf' },
+    { name: '7-Analog & Digital Signals.pdf', path: '/notes/computer-networks/7-Analog & Digital Signals.pdf', size: '1.7 MB', type: 'pdf' },
+    { name: '8-Transmission Media.pdf', path: '/notes/computer-networks/8-Transmission Media.pdf', size: '2.3 MB', type: 'pdf' },
+    { name: '9-Switching.pdf', path: '/notes/computer-networks/9-Switching.pdf', size: '2.6 MB', type: 'pdf' },
+    { name: '10-Data Link Layer.pdf', path: '/notes/computer-networks/10-Data Link Layer.pdf', size: '2.2 MB', type: 'pdf' },
+    { name: 'Data-Communications-and-Network.pdf', path: '/notes/computer-networks/Data-Communications-and-Network.pdf', size: '4.1 MB', type: 'pdf' }
     ],
     'software-engineering': [
       { name: 'Chapter 1 Introduction.pdf', path: '/notes/software-engineering/Chapter 1 Introduction.pdf', size: '1.9 MB', type: 'pdf' },
