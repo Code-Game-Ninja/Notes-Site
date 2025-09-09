@@ -77,7 +77,9 @@ const NotesList = ({ subject, navigateTo }) => {
       { name: 'Question Paper 7', path: '/notes/pyq-papers/WhatsApp Image 2025-09-01 at 22.10.55_7c07fd40.jpg', size: '1.1 MB', type: 'image' },
       { name: 'Question Paper 8', path: '/notes/pyq-papers/WhatsApp Image 2025-09-05 at 09.14.12_db9d70dd.jpg', size: '1.3 MB', type: 'image' },
       { name: 'Question Paper 9', path: '/notes/pyq-papers/WhatsApp Image 2025-09-05 at 09.14.12_e7907391.jpg', size: '1.0 MB', type: 'image' },
-      { name: 'Question Paper 10', path: '/notes/pyq-papers/WhatsApp Image 2025-09-05 at 09.14.12_fed0dbc3.jpg', size: '1.2 MB', type: 'image' }
+      { name: 'Question Paper 10', path: '/notes/pyq-papers/WhatsApp Image 2025-09-05 at 09.14.12_fed0dbc3.jpg', size: '1.2 MB', type: 'image' },
+      { name: '5Th Sem ALL PYQ', path: '/notes/pyq-papers/5th semester PYQ FOR CS.pdf', size: '5.6 MB', type: 'pdf' },
+      { name: '5Th Sem ALL PYQ (Other one)', path: '/notes/pyq-papers/sem 5pyq.pdf', size: '4.8 MB', type: 'pdf' }
     ]
   };
 
