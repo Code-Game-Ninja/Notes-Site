@@ -192,7 +192,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-- **Email**: support@noteshub.com
+- **Email**: chiragmishra2511@gmail.com
 - **GitHub**: [Code-Game-Ninja](https://github.com/Code-Game-Ninja)
 
 ---
