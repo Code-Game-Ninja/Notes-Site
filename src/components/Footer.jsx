@@ -59,7 +59,7 @@ const Footer = ({ navigateTo }) => {
                 <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="text-gray-300 text-sm">fakemaster1230@gamil.com</span>
+                <span className="text-gray-300 text-sm">chiragmishra573@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ const Footer = ({ navigateTo }) => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Notes Hub. All rights reserved. | Made with ❤️ for students
+            © {new Date().getFullYear()} Notes Hub. All rights reserved. | Made with ❤️ for students | By Chirag Mishra
           </p>
         </div>
       </div>

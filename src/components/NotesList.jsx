@@ -30,7 +30,9 @@ const NotesList = ({ subject, navigateTo }) => {
       { name: 'Unit1,2 (part 1) - Finite state machine, string, languages accepting FA.docx', path: '/notes/toc/Unit1,2 (part 1) - Finite state machine, string, languages accepting FA.docx', size: '1.5 MB', type: 'docx' },
       { name: 'Unit 2 (part 2)-NDFA to FA, Mealy & Moore machine model - Copy.docx', path: '/notes/toc/Unit 2 (part 2)-NDFA to FA, Mealy & Moore machine model - Copy.docx', size: '2.1 MB', type: 'docx' },
       { name: 'Unit 2 (part 3) - RE to FA, Equivalence of FA\'s & RE\'s, FA to RG and vice-versa.docx', path: '/notes/toc/Unit 2 (part 3) - RE to FA, Equivalence of FA\'s & RE\'s, FA to RG and vice-versa.docx', size: '2.7 MB', type: 'docx' },
-      { name: 'Unit 2 (part 4) - Minimization of FA.docx', path: '/notes/toc/Unit 2 (part 4) - Minimization of FA.docx', size: '1.8 MB', type: 'docx' }
+      { name: 'Unit 2 (part 4) - Minimization of FA.docx', path: '/notes/toc/Unit 2 (part 4) - Minimization of FA.docx', size: '1.8 MB', type: 'docx' },
+      {name: 'Unit 3 (part 1) - Context Free Grammar, Chomsky Hierarchy.docx', path: '/notes/toc/Unit 3 (part 1) - Context Free Grammar, Chomsky Hierarchy.docx', size: '2.0 MB', type: 'docx' },
+    
     ],
     'computer-graphics': [
       // Main Notes and Books
