@@ -1,0 +1,40 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Notes files - organized by subject
+    match /notes/{subject}/{fileName} {
+      // Anyone can read/download files (public access)
+      allow read: if true;
+      
+      // Only authenticated users can upload files
+      allow create: if request.auth != null
+                    // File size limit: 10MB
+                    && request.resource.size < 10 * 1024 * 1024
+                    // Only allow specific file types
+                    && (request.resource.contentType.matches('application/pdf')
+                        || request.resource.contentType.matches('image/jpeg')
+                        || request.resource.contentType.matches('image/jpg') 
+                        || request.resource.contentType.matches('image/png'))
+                    // Valid subject folders
+                    && subject in ['computer-networks', 'software-engineering', 
+                                  'toc', 'computer-graphics', 'pyq-papers']
+                    // Filename should contain timestamp (security measure)
+                    && fileName.matches('.*[0-9]{13}.*');
+      
+      // Only authenticated users can delete files
+      // Note: In production, you might want to restrict this further
+      allow delete: if request.auth != null;
+    }
+    
+    // User profile pictures (optional - for future use)
+    match /profiles/{userId}/{fileName} {
+      allow read: if true;
+      allow create, update: if request.auth != null 
+                            && request.auth.uid == userId
+                            && request.resource.size < 2 * 1024 * 1024 // 2MB limit
+                            && request.resource.contentType.matches('image/.*');
+      allow delete: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

@@ -1,19 +1,28 @@
 import React from 'react';
 import SubjectList from './SubjectList';
 import About from './About';
+import { useAuth } from '../context/AuthContext';
 
 const Home = ({ navigateTo }) => {
+  const { currentUser } = useAuth();
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
+          {currentUser && (
+            <div className="mb-6 inline-block bg-blue-100 text-blue-800 px-6 py-3 rounded-full">
+              <span className="font-semibold">Welcome back, {currentUser.displayName || currentUser.email}!</span> 🎉
+            </div>
+          )}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
             Welcome to <span className="text-blue-600">Notes Hub</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Access and download study notes for Computer Networks, Software Engineering, Theory of Computation, Computer Graphics, and PYQ Papers.
-            All materials are organized and ready for easy access.
+            {currentUser 
+              ? 'Browse, download, and share study notes with the community. Upload your own notes to help fellow students!'
+              : 'Access and download study notes for Computer Networks, Software Engineering, Theory of Computation, Computer Graphics, and PYQ Papers. Sign in to upload your own notes!'
+            }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#subjects" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">

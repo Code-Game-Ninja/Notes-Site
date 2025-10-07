@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
+import { db } from '../config/firebase';
 
 const NotesList = ({ subject, navigateTo }) => {
-  const notesData = {
+  const [firebaseNotes, setFirebaseNotes] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Static notes data (existing notes)
+  const staticNotesData = {
     'computer-networks': [
     { name: '1-Data Communications.pdf', path: '/notes/computer-networks/1-Data Communications.pdf', size: '2.1 MB', type: 'pdf' },
     { name: '2-Networks.pdf', path: '/notes/computer-networks/2-Networks.pdf', size: '1.8 MB', type: 'pdf' },
@@ -83,7 +89,48 @@ const NotesList = ({ subject, navigateTo }) => {
     ]
   };
 
-  const notes = notesData[subject] || [];
+  // Fetch notes from Firebase
+  useEffect(() => {
+    const fetchNotes = async () => {
+      try {
+        setLoading(true);
+        const notesRef = collection(db, 'notes');
+        const q = query(
+          notesRef, 
+          where('subject', '==', subject),
+          where('status', '==', 'approved'),
+          orderBy('timestamp', 'desc')
+        );
+        const querySnapshot = await getDocs(q);
+        
+        const fetchedNotes = querySnapshot.docs.map(doc => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            name: data.title,
+            path: data.downloadURL,
+            size: data.fileSize,
+            type: data.fileType.includes('pdf') ? 'pdf' : 'image',
+            uploadedBy: data.uploaderName,
+            description: data.description,
+            isFirebaseNote: true
+          };
+        });
+        
+        setFirebaseNotes(fetchedNotes);
+      } catch (error) {
+        console.error('Error fetching notes:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNotes();
+  }, [subject]);
+
+  // Combine static and Firebase notes
+  const staticNotes = staticNotesData[subject] || [];
+  const notes = [...firebaseNotes, ...staticNotes];
   const subjectNames = {
     'computer-networks': 'Computer Networks',
     'software-engineering': 'Software Engineering',
@@ -134,6 +181,13 @@ const NotesList = ({ subject, navigateTo }) => {
           </p>
         </div>
 
+        {loading && (
+          <div className="text-center py-12">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <p className="text-gray-600 mt-4">Loading notes...</p>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {notes.map((note, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-100">
@@ -142,12 +196,23 @@ const NotesList = ({ subject, navigateTo }) => {
                   <h3 className="text-lg font-semibold text-gray-800 mb-2 leading-tight">
                     {note.name.replace('.pdf', '').replace('.docx', '').replace('.pptx', '')}
                   </h3>
+                  {note.isFirebaseNote && note.uploadedBy && (
+                    <div className="flex items-center text-xs text-blue-600 mb-2">
+                      <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      Uploaded by {note.uploadedBy}
+                    </div>
+                  )}
                   <div className="flex items-center text-sm text-gray-500 mb-3">
                     <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     {note.size}
                   </div>
+                  {note.description && (
+                    <p className="text-sm text-gray-600 mb-3">{note.description}</p>
+                  )}
                 </div>
                 <div className="ml-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
