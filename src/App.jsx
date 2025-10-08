@@ -6,11 +6,18 @@ import About from './components/About'
 import Contact from './components/Contact'
 import NotesList from './components/NotesList'
 import Footer from './components/Footer'
+import Login from './components/Login'
+import UploadNote from './components/UploadNote'
+import AdminDashboard from './components/AdminDashboard'
 import { useState, useEffect } from 'react'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   const [currentView, setCurrentView] = useState('home')
   const [subject, setSubject] = useState('')
+  const [showLogin, setShowLogin] = useState(false)
+  const [showUpload, setShowUpload] = useState(false)
+  const [showAdmin, setShowAdmin] = useState(false)
 
   useEffect(() => {
     const path = window.location.pathname
@@ -85,14 +92,42 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar navigateTo={navigateTo} />
+    <AuthProvider>
+      <Navbar 
+        navigateTo={navigateTo} 
+        onLoginClick={() => setShowLogin(true)}
+        onUploadClick={() => setShowUpload(true)}
+        onAdminClick={() => setShowAdmin(true)}
+      />
       {currentView === 'home' && <Home navigateTo={navigateTo} />}
       {currentView === 'about' && <About />}
       {currentView === 'contact' && <Contact />}
       {currentView === 'notes' && <NotesList subject={subject} navigateTo={navigateTo} />}
       <Footer navigateTo={navigateTo} />
-    </>
+      
+      {showLogin && (
+        <Login 
+          navigateTo={navigateTo}
+          onClose={() => setShowLogin(false)} 
+        />
+      )}
+      
+      {showUpload && (
+        <UploadNote 
+          onClose={() => setShowUpload(false)}
+          onUploadSuccess={() => {
+            // Optionally refresh the notes list
+            console.log('Upload successful!')
+          }}
+        />
+      )}
+
+      {showAdmin && (
+        <AdminDashboard 
+          onClose={() => setShowAdmin(false)}
+        />
+      )}
+    </AuthProvider>
   )
 }
 
